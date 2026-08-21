@@ -1,11 +1,13 @@
 name: Update latest posts
 
 # Pulls the newest posts from hire.adam.matthewsteinberger.com's RSS feed
-# into README.md between the BLOG-POST-LIST markers and commits the result.
-# Runs on the default branch (develop) — that's the branch the profile renders.
+# into README.md between the BLOG-POST-LIST markers.
 #
-# The develop ruleset requires PRs, so the push uses a write deploy key
-# (secret README_DEPLOY_KEY) which the ruleset lists as a bypass actor.
+# develop and main are protected: no force-push, linear history, and every
+# change must arrive as a pull request. Only the repo admin bypasses that, so
+# this workflow does not push to develop. It pushes a branch — which the
+# ruleset does not cover — then opens a PR and squash-merges it with the
+# built-in GITHUB_TOKEN. No deploy key and no bypass actor required.
 
 on:
   schedule:
@@ -13,7 +15,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 concurrency:
   group: update-latest-posts
@@ -26,15 +29,13 @@ env:
   # published on the site and in the RSS feed — they just aren't the first thing
   # a hiring manager reads here.
   EXCLUDED_POST_SLUGS: "why-im-leaving-a-job-i-liked"
+  BRANCH: automation/update-latest-posts
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ssh-key: ${{ secrets.README_DEPLOY_KEY }}
-          persist-credentials: true
 
       - name: Pull latest posts into README (no commit)
         # gautamkrishnar/blog-post-workflow v1 / 1.9.7
@@ -51,14 +52,32 @@ jobs:
       - name: Apply exclusions and trim the list
         run: python3 .github/scripts/filter_posts.py
 
-      - name: Commit and push over SSH (deploy key)
+      - name: Open a PR and merge it
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
+
           if git diff --quiet -- README.md; then
-            echo "README unchanged; nothing to push."
+            echo "README unchanged; nothing to do."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
           git add README.md
           git commit -m "chore(readme): update latest posts"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git push --force origin "HEAD:refs/heads/${BRANCH}"
+
+          # Reuse an open PR if a previous run left one behind.
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number')" ]; then
+            gh pr create \
+              --base "${GITHUB_REF_NAME}" \
+              --head "$BRANCH" \
+              --title "chore(readme): update latest posts" \
+              --body "Automated refresh of the BLOG-POST-LIST block from the site's RSS feed."
+          fi
+
+          # Squash keeps the linear history the ruleset requires.
+          gh pr merge "$BRANCH" --squash --delete-branch
