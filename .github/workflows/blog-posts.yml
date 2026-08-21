@@ -1,0 +1,64 @@
+name: Update latest posts
+
+# Pulls the newest posts from hire.adam.matthewsteinberger.com's RSS feed
+# into README.md between the BLOG-POST-LIST markers and commits the result.
+# Runs on the default branch (develop) — that's the branch the profile renders.
+#
+# The develop ruleset requires PRs, so the push uses a write deploy key
+# (secret README_DEPLOY_KEY) which the ruleset lists as a bypass actor.
+
+on:
+  schedule:
+    - cron: "0 13 * * 1,4" # Mon + Thu, 09:00 US Eastern (13:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-latest-posts
+  cancel-in-progress: true
+
+env:
+  # How many posts end up in the README after filtering.
+  POSTS_SHOWN: "4"
+  # Comma-separated URL slugs to keep off the hiring profile. These posts stay
+  # published on the site and in the RSS feed — they just aren't the first thing
+  # a hiring manager reads here.
+  EXCLUDED_POST_SLUGS: "why-im-leaving-a-job-i-liked"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.README_DEPLOY_KEY }}
+          persist-credentials: true
+
+      - name: Pull latest posts into README (no commit)
+        # gautamkrishnar/blog-post-workflow v1 / 1.9.7
+        uses: gautamkrishnar/blog-post-workflow@f177491c77670f150ab4e9b9890254d8eba4164b
+        with:
+          feed_list: "https://hire.adam.matthewsteinberger.com/feed.xml"
+          # Over-fetch so the list is still full after the exclusions below.
+          max_post_count: 10
+          readme_path: ./README.md
+          template: "- [$title]($url) — $date$newline"
+          date_format: "mmm d, yyyy"
+          skip_commit: "true"
+
+      - name: Apply exclusions and trim the list
+        run: python3 .github/scripts/filter_posts.py
+
+      - name: Commit and push over SSH (deploy key)
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README unchanged; nothing to push."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore(readme): update latest posts"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

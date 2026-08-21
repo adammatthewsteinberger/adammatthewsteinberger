@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" font-family="'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#050611"/>
+      <stop offset="0.55" stop-color="#0a0b24"/>
+      <stop offset="1" stop-color="#160a2e"/>
+    </linearGradient>
+    <radialGradient id="horizon" cx="0.5" cy="0.62" r="0.55">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity="0.55"/>
+      <stop offset="0.35" stop-color="#7a2bff" stop-opacity="0.28"/>
+      <stop offset="0.7" stop-color="#00f0ff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.25" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.9"/>
+    </linearGradient>
+    <mask id="gridMask"><rect x="0" y="236" width="1584" height="160" fill="url(#gridFade)"/></mask>
+    <linearGradient id="cyanMag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cfe9ff"/>
+    </linearGradient>
+    <filter id="glowC" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="glowSoft" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" opacity="0.28"/>
+    </pattern>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#00f0ff" opacity="0.18"/>
+    </pattern>
+    <clipPath id="round"><rect width="1584" height="396" rx="21"/></clipPath>
+    <clipPath id="grid"><rect x="0" y="236" width="1584" height="160"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+  <!-- background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <rect width="1584" height="396" fill="url(#dots)"/>
+  <rect width="1584" height="396" fill="url(#horizon)"/>
+
+  <!-- perspective grid floor -->
+  <g clip-path="url(#grid)" mask="url(#gridMask)">
+    <g stroke="#ff2bd6" stroke-width="1.2" fill="none" opacity="0.85" filter="url(#glowSoft)">
+      <!-- vertical converging lines: vanishing point (792,196) -->
+      <path d="M792 196 L-900 396 M792 196 L-560 396 M792 196 L-260 396 M792 196 L20 396 M792 196 L270 396 M792 196 L500 396 M792 196 L700 396 M792 196 L792 396 M792 196 L884 396 M792 196 L1084 396 M792 196 L1314 396 M792 196 L1564 396 M792 196 L1844 396 M792 196 L2144 396 M792 196 L2484 396"/>
+      <!-- horizontal lines: spacing grows toward bottom -->
+      <path d="M0 246 H1584 M0 253 H1584 M0 262 H1584 M0 273 H1584 M0 287 H1584 M0 304 H1584 M0 325 H1584 M0 351 H1584 M0 383 H1584"/>
+    </g>
+    <g stroke="#ff8af0" stroke-width="0.6" fill="none" opacity="0.9">
+      <path d="M0 246 H1584 M0 253 H1584 M0 262 H1584 M0 273 H1584 M0 287 H1584 M0 304 H1584 M0 325 H1584 M0 351 H1584 M0 383 H1584"/>
+    </g>
+  </g>
+  <!-- horizon line -->
+  <rect x="0" y="235" width="1584" height="2" fill="url(#cyanMag)" opacity="0.9" filter="url(#glowC)"/>
+
+  <!-- circuit traces, top right -->
+  <g stroke="#00f0ff" stroke-width="1.2" fill="none" opacity="0.32" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1180 34 H1310 L1340 64 H1470 L1500 34 H1584"/>
+    <path d="M1250 70 H1360 L1390 100 H1584"/>
+    <path d="M1420 20 V50 L1450 80 V120"/>
+    <path d="M1520 60 V96 L1560 136 V180"/>
+    <path d="M1300 130 H1400 L1420 150 H1584"/>
+    <circle cx="1310" cy="34" r="3" fill="#00f0ff"/>
+    <circle cx="1360" cy="70" r="3" fill="#00f0ff"/>
+    <circle cx="1450" cy="120" r="3" fill="#00f0ff"/>
+    <circle cx="1300" cy="130" r="3" fill="#00f0ff"/>
+    <circle cx="1560" cy="180" r="3" fill="#00f0ff"/>
+  </g>
+  <!-- circuit traces, top left (kept above the profile-photo zone) -->
+  <g stroke="#ff2bd6" stroke-width="1.2" fill="none" opacity="0.28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 40 H120 L150 70 H260"/>
+    <path d="M0 96 H80 L110 126 H200 L230 156"/>
+    <circle cx="260" cy="70" r="3" fill="#ff2bd6"/>
+    <circle cx="230" cy="156" r="3" fill="#ff2bd6"/>
+  </g>
+
+  <g transform='translate(-75,0)'>
+<!-- HUD brackets -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none" opacity="0.9" filter="url(#glowC)">
+    <path d="M404 44 V24 H424"/>
+    <path d="M1310 24 H1330 V44"/>
+    <path d="M404 322 V342 H424"/>
+    <path d="M1310 342 H1330 V322"/>
+  </g>
+  <!-- HUD tick marks along the top -->
+  <g stroke="#00f0ff" stroke-width="1" opacity="0.35">
+    <path d="M460 24 V30 M500 24 V30 M540 24 V30 M580 24 V30 M620 24 V30 M660 24 V30 M700 24 V30 M740 24 V30 M780 24 V30 M820 24 V30 M860 24 V30 M900 24 V30 M940 24 V30 M980 24 V30 M1020 24 V30 M1060 24 V30 M1100 24 V30 M1140 24 V30 M1180 24 V30 M1220 24 V30 M1260 24 V30"/>
+  </g>
+  <text x="430" y="40" font-family="Menlo, Monaco, monospace" font-size="11" fill="#00f0ff" opacity="0.75" letter-spacing="2">// SYS.PROFILE :: ADAM_MATTHEW_STEINBERGER</text>
+  <text x="1304" y="40" text-anchor="end" font-family="Menlo, Monaco, monospace" font-size="11" fill="#ff2bd6" opacity="0.8" letter-spacing="2">STATUS: AVAILABLE_SEP_2026</text>
+
+  <!-- name with chromatic aberration -->
+  <g font-family="'DIN Condensed', 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="88" letter-spacing="2">
+    <text x="440" y="122" fill="#ff2bd6" opacity="0.55" filter="url(#glowStrong)">ADAM MATTHEW STEINBERGER</text>
+    <text x="437" y="122" fill="#00f0ff" opacity="0.7">ADAM MATTHEW STEINBERGER</text>
+    <text x="443" y="122" fill="#ff2bd6" opacity="0.7">ADAM MATTHEW STEINBERGER</text>
+    <text x="440" y="122" fill="url(#nameGrad)">ADAM MATTHEW STEINBERGER</text>
+  </g>
+
+  <!-- title -->
+  <text x="440" y="164" font-family="Menlo, Monaco, monospace" font-size="21" font-weight="700" fill="#00f0ff" letter-spacing="3" filter="url(#glowC)">STAFF SOFTWARE ARCHITECT &amp; AI AUTOMATION ENGINEER</text>
+
+  <!-- tagline -->
+  <text x="440" y="200" font-size="18.5" fill="#c9d3ea" letter-spacing="0.2">RAG systems · event-driven Azure microservices · automation pipelines</text>
+  <text x="440" y="226" font-size="18.5" fill="#c9d3ea" letter-spacing="0.2">that the people who inherit them can actually run.</text>
+
+  <!-- availability pill -->
+  <g filter="url(#glowC)">
+    <rect x="440" y="258" width="736" height="40" rx="20" fill="#061a14" stroke="#39ff14" stroke-width="1.6" opacity="0.95"/>
+    <circle cx="466" cy="278" r="5.5" fill="#39ff14"/>
+    <text x="482" y="284" font-family="Menlo, Monaco, monospace" font-size="15" fill="#7dff5c" letter-spacing="1.2">AVAILABLE SEPTEMBER 2026 · GREENVILLE, SC (REMOTE) · US REMOTE</text>
+  </g>
+
+  <!-- url + hire chip, bottom right -->
+  <text x="1304" y="335" text-anchor="end" font-family="Menlo, Monaco, monospace" font-size="14" fill="#a5b4d6" letter-spacing="1">hire.adam.matthewsteinberger.com</text>
+
+  <!-- glitch slivers over the name -->
+  <g opacity="0.9">
+    <rect x="620" y="86" width="140" height="3" fill="#00f0ff" opacity="0.35"/>
+    <rect x="980" y="104" width="90" height="2" fill="#ff2bd6" opacity="0.45"/>
+    <rect x="1120" y="66" width="60" height="2" fill="#00f0ff" opacity="0.4"/>
+  </g>
+
+  </g>
+<!-- scanlines + vignette -->
+  <rect width="1584" height="396" fill="url(#scan)"/>
+  <rect width="1584" height="396" fill="none" stroke="#000" stroke-width="40" opacity="0.28" rx="21"/>
+</g>
+</svg>
