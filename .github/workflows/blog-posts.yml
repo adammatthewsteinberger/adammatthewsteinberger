@@ -1,6 +1,6 @@
 name: Update latest posts
 
-# Pulls the newest posts from hire.adam.matthewsteinberger.com's RSS feed
+# Pulls the newest posts from vibewithadam.matthewsteinberger.com's RSS feed
 # into README.md between the BLOG-POST-LIST markers.
 #
 # develop and main are protected: no force-push, linear history, and every
@@ -41,7 +41,7 @@ jobs:
         # gautamkrishnar/blog-post-workflow v1 / 1.9.7
         uses: gautamkrishnar/blog-post-workflow@f177491c77670f150ab4e9b9890254d8eba4164b
         with:
-          feed_list: "https://hire.adam.matthewsteinberger.com/feed.xml"
+          feed_list: "https://vibewithadam.matthewsteinberger.com/feed.xml"
           # Over-fetch so the list is still full after the exclusions below.
           max_post_count: 10
           readme_path: ./README.md
