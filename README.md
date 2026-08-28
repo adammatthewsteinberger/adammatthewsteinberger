@@ -5,9 +5,9 @@
 
 # Adam Matthew Steinberger
 
-**Staff Software Architect & AI Automation Engineer** — 13+ years shipping RAG systems, event-driven Azure microservices, and automation pipelines that the people who inherit them can actually run.
+**Staff Software Architect & AI Automation Engineer** — I build AI systems that actually work inside enterprise environments: production-grade platforms that handle real data, real security requirements, and real organizational complexity. Not just demos.
 
-[![Available September 2026](https://img.shields.io/badge/Available-September%202026-1a7f37?style=flat-square)](https://hire.adam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/)
+[![Available September 2026](https://img.shields.io/badge/Available-September%202026-1a7f37?style=flat-square)](https://hire.adam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/) [![Join me](https://img.shields.io/badge/Join%20me-contribute-6f42c1?style=flat-square)](https://hire.adam.matthewsteinberger.com/join-me)
 
 Based in Greenville, SC. Looking for **Staff Software Architect · AI Automation Engineer · Staff/Principal AI Engineer · Solutions Architect · Platform/Automation Engineer** roles — Greenville-remote or US-remote, W2 preferred, contract-to-hire OK.
 
@@ -29,18 +29,24 @@ Underneath: secretless DevSecOps (OIDC workload identity across 20 CI workflows 
 
 All 17 case studies → **[/work](https://hire.adam.matthewsteinberger.com/work)**
 
-## Open source — 7 MIT packages on PyPI
+## Open source — MIT, on PyPI
 
 | Package | What it is | Links |
 |---|---|---|
 | **claudeloop** | Onion-architected autonomous Claude Code session runner. Never blocks on a human; tells an exhausted rate-limit window apart from exhausted credits and resumes across usage windows. | [PyPI](https://pypi.org/project/claudeloop/) · [repo](https://github.com/adammatthewsteinberger/claudeloop) |
 | **codexloop · cursorloop · agyloop** | The same runner, three more engines — OpenAI Codex, Cursor Agent, Google Antigravity/Gemini. Same contract, different vendor. | [codexloop](https://github.com/adammatthewsteinberger/codexloop) · [cursorloop](https://github.com/adammatthewsteinberger/cursorloop) · [agyloop](https://github.com/adammatthewsteinberger/agyloop) |
+| **qwenloop** | The same runner, fully local: Qwen 2.5 Coder 14B through llama.cpp by default or vLLM on NVIDIA. Never downloads weights on its own. | [PyPI](https://pypi.org/project/qwenloop/) · [repo](https://github.com/adammatthewsteinberger/qwenloop) |
 | **vibey** | Queue-based, six-phase conductor for autonomous software delivery on top of the `*loop` runners: spec interview → design pass → build → review → deploy. PostgreSQL-backed. | [PyPI](https://pypi.org/project/vibey/) · [repo](https://github.com/adammatthewsteinberger/vibey) |
+| **vibey-gh** | Release automation for a GitHub repository, stdlib only: provenance fingerprints, derived version bumps, exact-head AI review and repair, a merge train, dual-channel releases, docs maintenance. | [PyPI](https://pypi.org/project/vibey-gh/) · [repo](https://github.com/adammatthewsteinberger/vibey-gh) |
 | **vibey-bootstrap** | Formerly azure-bootstrap. The Azure Functions cross-cutting layer, solved once — config ↔ App Insights bootstrap cycle, structured logging, Service Bus plumbing, scaffold CLI. Used across 17+ Azure Functions repos. | [PyPI](https://pypi.org/project/vibey-bootstrap/) · [repo](https://github.com/adammatthewsteinberger/vibey-bootstrap) |
 | **vibey-skills** | Formerly vibe-engineering-skills. Claude Code plugin marketplace: 18 plugins, 71 Agent Skills across security, cloud, DevSecOps, AI/ML, architecture, QA. Every claim cites its source. | [PyPI](https://pypi.org/project/vibey-skills/) · [repo](https://github.com/adammatthewsteinberger/vibey-skills) |
 | **clippy-pet** | An animated paperclip pet for ChatGPT desktop and Codex CLI. Because not everything has to be serious. | [repo](https://github.com/adammatthewsteinberger/clippy-pet) |
 
 More → **[/open-source](https://hire.adam.matthewsteinberger.com/open-source)**
+
+## Contribute
+
+I primarily develop free and open-source software, and I'm always open for a connection or a coffee — Greenville-remote or US-remote volunteers are welcome and encouraged to get involved at any time. Everything a developer needs to get started (a free quickstart for the whole stack, how my own site is built with it, and where to begin) is at **[/join-me](https://hire.adam.matthewsteinberger.com/join-me)** · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
 
 ## Writing
 
@@ -64,7 +70,7 @@ Also in development: *Engineering Influence* — see **[/books](https://hire.ada
 
 ## How I work
 
-**Written-first, and the handoff is the deliverable.** I document as I build for the same reason a RAG pipeline cites its sources: an auditable trail beats a confident guess six months later. That's why the AI Payroll Processor transferred to a junior dev in 45 days instead of becoming someone's permanent second job.
+**Architecture before code. Juniors trained in parallel. Handoffs that hold.** I document as I build for the same reason a RAG pipeline cites its sources: an auditable trail beats a confident guess six months later. That's why the AI Payroll Processor transferred to a junior dev in 45 days instead of becoming someone's permanent second job.
 
 - **Depth on the details that matter** — I find the one row that contradicts the other nine hundred instead of averaging it away
 - **Onion Architecture and TDD by default** — 159/159 tests and 85.84% coverage on the GodFocus push system, in 5 billable hours
@@ -75,9 +81,9 @@ More → [my story](https://hire.adam.matthewsteinberger.com/story) · [hire me]
 
 ## Now
 
-- Senior Azure & AI Development Engineer, **The Vizius Group**, Sep 2025 – Aug 2026. **Available September 2026.**
+- Senior Azure & AI Development Engineer, **The Vizius Group**, Sep 2025 – Aug 2026. **Available from September 2026.**
 - Volunteer software architect for a nonprofit AI apologetics chat platform since Apr 2026 — the AI→human live-chat relay is written up at [/work/project-excite-relay](https://hire.adam.matthewsteinberger.com/work/project-excite-relay).
-- Short consulting engagements are still possible → [book a call](https://tidycal.com/adammatthewsteinberger)
+- Hiring for a business rather than an engineering team? The executive edition of my site states the problem first → [/for-executives](https://hire.adam.matthewsteinberger.com/for-executives)
 - B.A. Computer Science, Skidmore College (2012) · Certified ScrumMaster (2021)
 
 <details>
