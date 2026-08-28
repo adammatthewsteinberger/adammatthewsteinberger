@@ -110,3 +110,7 @@ More → [my story](https://vibewithadam.matthewsteinberger.com/story) · [hire 
 ## Contact
 
 [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com) · [LinkedIn](https://www.linkedin.com/in/adammatthewsteinberger/) · [vibewithadam.matthewsteinberger.com](https://vibewithadam.matthewsteinberger.com/) · [RSS](https://vibewithadam.matthewsteinberger.com/feed.xml) · [llms.txt](https://vibewithadam.matthewsteinberger.com/llms.txt)
+
+---
+
+This profile is [CC BY 4.0](LICENSE) · the site behind it is open source: [adammatthewsteinberger/portfolio](https://github.com/adammatthewsteinberger/portfolio) (MIT code, CC BY 4.0 content) · [/join-me](https://vibewithadam.matthewsteinberger.com/join-me)
