@@ -100,7 +100,7 @@
     <path d="M460 24 V30 M500 24 V30 M540 24 V30 M580 24 V30 M620 24 V30 M660 24 V30 M700 24 V30 M740 24 V30 M780 24 V30 M820 24 V30 M860 24 V30 M900 24 V30 M940 24 V30 M980 24 V30 M1020 24 V30 M1060 24 V30 M1100 24 V30 M1140 24 V30 M1180 24 V30 M1220 24 V30 M1260 24 V30"/>
   </g>
   <text x="430" y="40" font-family="Menlo, Monaco, monospace" font-size="11" fill="#00f0ff" opacity="0.75" letter-spacing="2">// SYS.PROFILE :: ADAM_MATTHEW_STEINBERGER</text>
-  <text x="1304" y="40" text-anchor="end" font-family="Menlo, Monaco, monospace" font-size="11" fill="#ff2bd6" opacity="0.8" letter-spacing="2">STATUS: AVAILABLE_SEP_2026</text>
+  <text x="1304" y="40" text-anchor="end" font-family="Menlo, Monaco, monospace" font-size="11" fill="#ff2bd6" opacity="0.8" letter-spacing="2">STATUS: BUILDING_IN_THE_OPEN</text>
 
   <!-- name with chromatic aberration -->
   <g font-family="'DIN Condensed', 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="88" letter-spacing="2">
@@ -117,14 +117,14 @@
   <text x="440" y="200" font-size="18.5" fill="#c9d3ea" letter-spacing="0.2">RAG systems · event-driven Azure microservices · automation pipelines</text>
   <text x="440" y="226" font-size="18.5" fill="#c9d3ea" letter-spacing="0.2">that the people who inherit them can actually run.</text>
 
-  <!-- availability pill -->
+  <!-- contributors pill: the three audiences, in order -->
   <g filter="url(#glowC)">
-    <rect x="440" y="258" width="736" height="40" rx="20" fill="#061a14" stroke="#39ff14" stroke-width="1.6" opacity="0.95"/>
+    <rect x="440" y="258" width="798" height="40" rx="20" fill="#061a14" stroke="#39ff14" stroke-width="1.6" opacity="0.95"/>
     <circle cx="466" cy="278" r="5.5" fill="#39ff14"/>
-    <text x="482" y="284" font-family="Menlo, Monaco, monospace" font-size="15" fill="#7dff5c" letter-spacing="1.2">AVAILABLE SEPTEMBER 2026 · GREENVILLE, SC (REMOTE) · US REMOTE</text>
+    <text x="482" y="284" font-family="Menlo, Monaco, monospace" font-size="15" fill="#7dff5c" letter-spacing="1.2">CONTRIBUTORS WELCOME · DEVELOPERS · GOVERNMENTS &amp; MILITARY · ACADEMIA</text>
   </g>
 
-  <!-- url + hire chip, bottom right -->
+  <!-- url, bottom right -->
   <text x="1304" y="335" text-anchor="end" font-family="Menlo, Monaco, monospace" font-size="14" fill="#a5b4d6" letter-spacing="1">vibewithadam.matthewsteinberger.com</text>
 
   <!-- glitch slivers over the name -->
