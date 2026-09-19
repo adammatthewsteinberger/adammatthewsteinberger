@@ -5,9 +5,9 @@
 
 # Adam Matthew Steinberger
 
-**Staff Software Architect & AI Automation Engineer** — I build AI systems that actually work inside enterprise environments: production-grade platforms that handle real data, real security requirements, and real organizational complexity. Not just demos.
+**Staff Software Architect & AI Automation Engineer** — I build AI systems that actually work inside enterprise environments: production-grade platforms that handle real data, real security requirements, and real organizational complexity. Not just demos. I am also the creator and maintainer of [The Vibey Project](https://github.com/the-vibey-project/vibey), an open-source conductor for reliable agentic software delivery.
 
-[![Available from September 2026](https://img.shields.io/badge/Available-from%20September%202026-1a7f37?style=flat-square)](https://vibewithadam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/) [![Join me](https://img.shields.io/badge/Join%20me-contribute-6f42c1?style=flat-square)](https://vibewithadam.matthewsteinberger.com/join-me)
+[![Available from September 2026](https://img.shields.io/badge/Available-from%20September%202026-1a7f37?style=flat-square)](https://vibewithadam.matthewsteinberger.com/hire-me) [![Vibey](https://img.shields.io/badge/Vibey-open%20source-6f42c1?style=flat-square)](https://github.com/the-vibey-project/vibey) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/) [![Join me](https://img.shields.io/badge/Join%20me-contribute-6f42c1?style=flat-square)](https://vibewithadam.matthewsteinberger.com/join-me)
 
 Based in Greenville, SC. Looking for **Staff Software Architect · AI Automation Engineer · Staff/Principal AI Engineer · Solutions Architect · Platform/Automation Engineer** roles — Greenville-remote or US-remote, W2 preferred, contract-to-hire OK.
 
@@ -17,6 +17,7 @@ Based in Greenville, SC. Looking for **Staff Software Architect · AI Automation
 
 Proof, not promises. Every number below is from a real engagement; client identities stay out of it.
 
+- **[The Vibey Project](https://github.com/the-vibey-project/vibey)** — creator and maintainer. A queue-based, six-phase conductor that takes a change from spec interview through design, build, review, and optional deployment across Claude Code, OpenAI Codex, Cursor Agent, Google Antigravity/Gemini, and local Qwen. One `pip install vibey` ships the family: append-only PostgreSQL ledger, leased idempotent jobs, deterministic no-loss handoffs, sovereign-first review, billing-aware feasibility, and continuous delivery estimates.
 - **[AI Governance Gateway](https://vibewithadam.matthewsteinberger.com/work/ai-governance-gateway)** — sole architect. Five model vendors (Azure AI, Anthropic, OpenAI/Codex, Cursor, Grok, Gemini) behind one policy-enforced, OpenAI-compatible API: per-project USD spend caps, multi-unit rate limiting, HMAC-signed hash-chained audit trail, no API keys in the path. Three product teams migrated onto it; their credentials retired.
 - **[AI Payroll Processor](https://vibewithadam.matthewsteinberger.com/work/enterprise-ai-payroll-processor)** — co-lead. 20 microservices, four human-approved phases, 585 test modules, Terraform/Helm/GitOps on private AKS. Architecture production-ready at day 45; a junior dev trained in parallel now owns it.
 - **[Identity Governance as Code](https://vibewithadam.matthewsteinberger.com/work/identity-governance-as-code)** — sole author. Two control planes reconciling tenant state from Git: a kopf operator with fully secretless multi-tenant auth and LLM-drafted PRs, and an IdP governance platform managing 40 resource kinds via six addressing patterns, human-gated destructive drift, point-in-time reversion.
@@ -29,20 +30,29 @@ Underneath: secretless DevSecOps (OIDC workload identity across 20 CI workflows 
 
 All 17 case studies → **[/work](https://vibewithadam.matthewsteinberger.com/work)**
 
-## Open source — MIT, on PyPI
+## Open source — one monorepo, one distribution
 
-| Package | What it is | Links |
+The Vibey Project consolidated the former runner and tooling repositories into one
+MIT-licensed uv workspace and one release. The components keep their own contracts,
+tests, and architecture, but a user installs the family once.
+
+| Component | What it is | Links |
 |---|---|---|
-| **claudeloop** | Onion-architected autonomous Claude Code session runner. Never blocks on a human; tells an exhausted rate-limit window apart from exhausted credits and resumes across usage windows. | [PyPI](https://pypi.org/project/claudeloop/) · [repo](https://github.com/adammatthewsteinberger/claudeloop) |
-| **codexloop · cursorloop · agyloop** | The same runner, three more engines — OpenAI Codex, Cursor Agent, Google Antigravity/Gemini. Same contract, different vendor. | [codexloop](https://github.com/adammatthewsteinberger/codexloop) · [cursorloop](https://github.com/adammatthewsteinberger/cursorloop) · [agyloop](https://github.com/adammatthewsteinberger/agyloop) |
-| **qwenloop** | The same runner, fully local: Qwen 2.5 Coder 14B through llama.cpp by default or vLLM on NVIDIA. Never downloads weights on its own. | [PyPI](https://pypi.org/project/qwenloop/) · [repo](https://github.com/adammatthewsteinberger/qwenloop) |
-| **vibey** | Queue-based, six-phase conductor for autonomous software delivery on top of the `*loop` runners: spec interview → design pass → build → review → deploy. PostgreSQL-backed. | [PyPI](https://pypi.org/project/vibey/) · [repo](https://github.com/adammatthewsteinberger/vibey) |
-| **vibey-gh** | Release automation for a GitHub repository, stdlib only: provenance fingerprints, derived version bumps, exact-head AI review and repair, a merge train, dual-channel releases, docs maintenance. | [PyPI](https://pypi.org/project/vibey-gh/) · [repo](https://github.com/adammatthewsteinberger/vibey-gh) |
-| **vibey-bootstrap** | Formerly azure-bootstrap. The Azure Functions cross-cutting layer, solved once — config ↔ App Insights bootstrap cycle, structured logging, Service Bus plumbing, scaffold CLI. Used across 17+ Azure Functions repos. | [PyPI](https://pypi.org/project/vibey-bootstrap/) · [repo](https://github.com/adammatthewsteinberger/vibey-bootstrap) |
-| **vibey-skills** | Formerly vibe-engineering-skills. Claude Code plugin marketplace: 18 plugins, 71 Agent Skills across security, cloud, DevSecOps, AI/ML, architecture, QA. Every claim cites its source. | [PyPI](https://pypi.org/project/vibey-skills/) · [repo](https://github.com/adammatthewsteinberger/vibey-skills) |
-| **clippy-pet** | An animated paperclip pet for ChatGPT desktop and Codex CLI. Because not everything has to be serious. | [repo](https://github.com/adammatthewsteinberger/clippy-pet) |
+| **`vibey`** | The conductor and the release that contains the whole family. | [PyPI](https://pypi.org/project/vibey/) · [repo](https://github.com/the-vibey-project/vibey) · [docs](https://the-vibey-project.github.io/vibey/main/) |
+| **`claudeloop` · `codexloop` · `cursorloop` · `agyloop` · `qwenloop`** | Five interchangeable session runners: Claude Code, OpenAI Codex, Cursor, Google Antigravity/Gemini, and fully local Qwen 2.5 Coder. | [runner source](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_runners) |
+| **`vibey-gh`** | Stdlib-first GitHub automation: provenance, exact-head review, merge train, release promotion, paper/book exports, and feasibility/forecast reporting. | [source](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/gh) |
+| **`vibey-skills`** | A deterministic Claude Code marketplace with 135 plugins and 710 evidence-grounded skills. | [source](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/skills) |
+| **`vibey-bootstrap`** | The optional Azure Functions cross-cutting layer, used across 17+ repositories. | [source](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/bootstrap) |
+| **`clippy-pet`** | An animated paperclip pet for ChatGPT desktop and Codex CLI. Because not everything has to be serious. | [repo](https://github.com/adammatthewsteinberger/clippy-pet) |
 
 More → **[/open-source](https://vibewithadam.matthewsteinberger.com/open-source)**
+
+The project publishes the formal research paper and the complete documentation book as
+HTML, PDF, EPUB, and print HTML surfaces. Editable DOCX exports are in the current
+development release and will be published with the next documentation release:
+[paper](https://the-vibey-project.github.io/vibey/main/paper/) ·
+[book](https://the-vibey-project.github.io/vibey/main/) ·
+[source](https://github.com/the-vibey-project/vibey/tree/develop/docs).
 
 ## Contribute
 
@@ -76,12 +86,14 @@ Also in development: *Engineering Influence* — see **[/books](https://vibewith
 - **Onion Architecture and TDD by default** — 159/159 tests and 85.84% coverage on the GodFocus push system, in 5 billable hours
 - **Cross-cutting concerns solved once** — `vibey-bootstrap` is the config/logging/Service Bus layer factored out of 17+ Azure Functions repos
 - **Process engineering alongside the code** — Epics → Features → Stories decomposition, so the work stays legible to the people funding it
+- **Sovereignty with evidence** — local engines are preferred when enabled, paid capacity is a fallback, and every handoff, review, estimate, and spend record remains inspectable in the ledger
 
 More → [my story](https://vibewithadam.matthewsteinberger.com/story) · [hire me](https://vibewithadam.matthewsteinberger.com/hire-me)
 
 ## Now
 
 - Senior Azure & AI Development Engineer, **The Vizius Group**, Sep 2025 – Aug 2026. **Available from September 2026.**
+- Creator and maintainer of **The Vibey Project**, actively shipping the monorepo, its research paper, and its documentation book.
 - Volunteer software architect for a nonprofit AI apologetics chat platform since Apr 2026 — the AI→human live-chat relay is written up at [/work/project-excite-relay](https://vibewithadam.matthewsteinberger.com/work/project-excite-relay).
 - Hiring for a business rather than an engineering team? The executive edition of my site states the problem first → [/for-executives](https://vibewithadam.matthewsteinberger.com/for-executives)
 - B.A. Computer Science, Skidmore College (2012) · Certified ScrumMaster (2021)
