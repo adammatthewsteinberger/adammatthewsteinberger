@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img src="assets/banner-light.png" width="100%" alt="Adam Matthew Steinberger — Staff Software Engineer, AI platform and identity. Maintainer of The Vibey Project. Open to Staff+ roles, Greenville, SC or US remote.">
-</picture>
+<a href="https://github.com/the-vibey-project/vibey"><img src="assets/banner.png" width="100%" alt="vibey — open-source multi-agent software delivery. pip install vibey-engine. Contributors welcome."></a>
 
 # Adam Matthew Steinberger
 
