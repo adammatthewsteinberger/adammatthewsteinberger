@@ -4,9 +4,11 @@
 
 **Staff Software Engineer — AI platforms, identity, and agent orchestration.** I build the infrastructure that lets AI run inside organizations that have to answer for it: secretless identity, policy-enforced model gateways, and audit trails that hold up to review. I also maintain **[vibey](https://github.com/the-vibey-project/vibey)**, an MIT-licensed conductor that carries a software change from spec to reviewed pull request across a pool of AI coding agents, and loses nothing when one of them fails.
 
-[![pip install vibey-engine](https://img.shields.io/pypi/v/vibey-engine?style=flat-square&label=pip%20install%20vibey-engine&color=6f42c1)](https://pypi.org/project/vibey-engine/) [![Research paper](https://img.shields.io/badge/paper-HTML%20%C2%B7%20PDF-0a7ea4?style=flat-square)](https://the-vibey-project.github.io/vibey/main/paper/) [![Open to Staff+ roles](https://img.shields.io/badge/open%20to-Staff%2B%20roles-1a7f37?style=flat-square)](https://vibewithadam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/)
+[![pip install vibey-engine](https://img.shields.io/pypi/v/vibey-engine?style=flat-square&label=pip%20install%20vibey-engine&color=6f42c1)](https://pypi.org/project/vibey-engine/) [![Research paper](https://img.shields.io/badge/paper-HTML%20%C2%B7%20PDF-0a7ea4?style=flat-square)](https://the-vibey-project.github.io/vibey/main/paper/) [![Fixed-scope projects](https://img.shields.io/badge/freelance-fixed--scope%20projects-9a6700?style=flat-square)](https://vibewithadam.matthewsteinberger.com/freelance) [![Open to Staff+ roles](https://img.shields.io/badge/open%20to-Staff%2B%20roles-1a7f37?style=flat-square)](https://vibewithadam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/)
 
 Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
+
+**Find your way in:** [help build vibey](#contribute) · [bring a fixed-scope project](#fixed-scope-projects-built-from-work-already-delivered) · [hire me for a Staff+ role](#open-to-staff-roles)
 
 ## vibey: delivery that survives the agent
 
@@ -38,13 +40,35 @@ pip install vibey-engine   # Python 3.12+, PostgreSQL 14+, macOS or Linux
 The project is small enough that one good pull request gets noticed. The CI gates handle formatting, coverage and layering, so review can stay on your design.
 
 1. **Say hello or ask anything** in [Discussions](https://github.com/the-vibey-project/vibey/discussions). No question is too basic.
-2. **Pick something from the [open issues](https://github.com/the-vibey-project/vibey/issues).** Fedora support, multi-project support and new skills are all open now. Comment before you start anything large, so we can agree on the shape first.
+2. **Pick something from the [open issues](https://github.com/the-vibey-project/vibey/issues).** Two good places to start: [Fedora support](https://github.com/the-vibey-project/vibey/issues/1188) and [new skills for vibey-skills](https://github.com/the-vibey-project/vibey/issues/1218). Comment before you start anything large, so we can agree on the shape first.
 3. **Set up with the [contributing guide](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md):** `uv sync`, two hook installs, and a local PostgreSQL. CI runs the same gates you run locally.
 4. **Open a pull request against `develop`.** Use Conventional Commits; the provenance hook adds the trailer for you.
 
 Rather talk first? Email me or start at **[/join-me](https://vibewithadam.matthewsteinberger.com/join-me)**. Contributors in Greenville and anywhere in the US are welcome, and I'm glad to pair on a first change.
 
 Also mine, and deliberately not serious: **[clippy-pet](https://github.com/adammatthewsteinberger/clippy-pet)**, an animated paperclip for the ChatGPT desktop app and Codex CLI.
+
+## Fixed-scope projects, built from work already delivered
+
+You have an AI feature to ship, a codebase to trust, or an audit on the calendar. It needs doing once, and doing right. Each package below is something I have already delivered in production, and each one names what you receive.
+
+| Package | What you receive | Done before |
+|---|---|---|
+| **AI codebase and security review** | A technical brief with every finding ranked by risk, an executive summary, and a phased roadmap with effort estimates | 59,000 lines across 190+ files reviewed in 10 hours; found 5% test coverage and missing auth middleware ([case study](https://vibewithadam.matthewsteinberger.com/work/chosen-people-answers-architecture)) |
+| **A production RAG chatbot in 30 days** | A chatbot grounded in your documents, hosted on your cloud or entirely on your own servers, with monitoring and a runbook | Two shipped in 30 days each, one fully self-hosted on Mistral-7B, FAISS and vLLM ([case study](https://vibewithadam.matthewsteinberger.com/work/self-hosted-rag-chatbot)) |
+| **An LLM cost and policy gateway** | One OpenAI-compatible API in front of your model vendors, with per-project allowlists, spend caps and a tamper-evident audit trail | Sole architect of a gateway in front of six vendors; three product teams moved onto it ([case study](https://vibewithadam.matthewsteinberger.com/work/ai-governance-gateway)) |
+| **Okta or Entra ID identity governance** | Access rules declared in Git, drift detection that holds destructive changes for a person, and an access model mapped to your audit | Two governance-as-code control planes, 40 resource kinds, no stored tenant secrets ([case study](https://vibewithadam.matthewsteinberger.com/work/identity-governance-as-code)) |
+| **SOC 2 or OWASP LLM Top 10 readiness for an AI feature** | A STRIDE threat model, a control map to the OWASP LLM Top 10 and NIST AI RMF, and a ranked gap list with a fix for each gap | A SOC 2 readiness assessment and threat model, and gateway controls mapped to both frameworks ([case study](https://vibewithadam.matthewsteinberger.com/work/ai-report-generator-email-intake)) |
+
+What you can count on, in writing:
+
+- **A written brief starts it.** You answer a short questionnaire on your schedule, and I reply with a written scope. Calls are welcome whenever they help; no step waits on one.
+- **Scope, price and "done" are fixed before work begins.** Every milestone closes against an acceptance checklist, and any change arrives as a written note you accept or decline.
+- **You never have to ask where things stand.** I reply in two set windows each business day (US Eastern), send a status note at every milestone, and keep a risk register you can read.
+- **Your project gets steady attention.** I take on no more than three engagements at a time.
+- **AI-assisted, and said so up front.** I build with AI coding agents under the same gates vibey uses, and I review and sign off every deliverable myself.
+
+**[See the full packages and send a brief →](https://vibewithadam.matthewsteinberger.com/freelance)** Prices are quoted per package in your written scope, or on my Upwork and Fiverr Pro listings as they go live. If we meet on a platform, the whole engagement stays on that platform.
 
 ## Production work
 
@@ -79,10 +103,10 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 - [Astra Solved 10 Open Math Problems for $2,000. ChatGPT Hit 1 Billion Users. Neither Changes the Advice I Give Clients.](https://vibewithadam.matthewsteinberger.com/blog/astra-1-billion-users-and-why-the-knowledge-base-is-the-moat) — Aug 5, 2026
 <!-- BLOG-POST-LIST:END -->
 
-## Now
+## Open to Staff+ roles
 
-- **Open to Staff+ software engineering roles** in AI platform, identity and access, agent infrastructure, and forward-deployed engineering. US remote or Greenville, SC. **[Everything a hiring manager needs →](https://vibewithadam.matthewsteinberger.com/hire-me)**
-- Maintaining **[The Vibey Project](https://github.com/the-vibey-project)**.
+- **Available now for Staff+ software engineering roles** in AI platform, identity and access, agent infrastructure, and forward-deployed engineering, including regulated and public-sector work. US remote or Greenville, SC. **[Everything a hiring manager needs →](https://vibewithadam.matthewsteinberger.com/hire-me)**
+- Maintaining **[The Vibey Project](https://github.com/the-vibey-project)** and taking a small number of [fixed-scope projects](#fixed-scope-projects-built-from-work-already-delivered) alongside it.
 - Volunteer software architect for a nonprofit AI chat platform. The AI-to-human live-chat relay is written up at [/work/project-excite-relay](https://vibewithadam.matthewsteinberger.com/work/project-excite-relay).
 - Previously Senior Azure and AI Development Engineer at The Vizius Group (Sep 2025 to Aug 2026). Over 13 years in production systems across insurance, fintech, healthcare and industrial testing.
 - B.A. Computer Science, Skidmore College · Certified ScrumMaster
@@ -99,6 +123,10 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 </details>
 
 ## Contact
+
+- **Want to contribute?** Start a thread in [vibey's Discussions](https://github.com/the-vibey-project/vibey/discussions).
+- **Have a project?** Send the [written brief](https://vibewithadam.matthewsteinberger.com/freelance#brief).
+- **Hiring?** Everything is on [/hire-me](https://vibewithadam.matthewsteinberger.com/hire-me).
 
 [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com) · [LinkedIn](https://www.linkedin.com/in/adammatthewsteinberger/) · [vibewithadam.matthewsteinberger.com](https://vibewithadam.matthewsteinberger.com/) · [RSS](https://vibewithadam.matthewsteinberger.com/feed.xml) · [llms.txt](https://vibewithadam.matthewsteinberger.com/llms.txt)
 
