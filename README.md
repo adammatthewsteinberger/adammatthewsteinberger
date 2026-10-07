@@ -17,23 +17,30 @@ You have probably used an AI coding agent and then babysat it: re-prompting when
 vibey is the layer that does the babysitting. It interviews you until the spec is sharp, builds unattended across several engines, brings you back only for the decisions that are yours, and survives crashes and credit exhaustion without dropping an open question.
 
 ```bash
-pip install vibey-engine   # Python 3.12+, PostgreSQL 14+, macOS or Linux
+uv tool install vibey-engine   # or: pipx install vibey-engine / pip install vibey-engine
+vibey doctor                   # checks your engines, local PostgreSQL, and the ledger guard
 ```
 
+Python 3.12+ and PostgreSQL 14+ on macOS or Linux. `vibey install --postgres` sets up a local database if you don't have one, and each engine still needs its own vendor CLI and credentials, which `vibey doctor` checks.
+
 - **Nothing is lost when an agent dies.** Every decision, finding and handoff is a row in an append-only PostgreSQL ledger, and workers claim jobs under `FOR UPDATE SKIP LOCKED` leases. In the chaos test, 8 workers ran 500 jobs with 20% killed mid-job. None were lost and none ran twice.
+- **The record can't be quietly rewritten.** The database itself refuses every update and delete on the ledger, and a SHA-256 hash chain over its events makes any edit visible.
 - **Handoffs are checked, not trusted.** Work moving from one engine to another must pass a model-free no-loss check, or it retries, escalates, or parks for a person.
 - **A human decision is a record, not a blocked terminal.** Approval gates are rows in the ledger and parked jobs, so nothing sits waiting on stdin.
-- **Five engines, one contract.** Claude Code, OpenAI Codex, Cursor Agent, Google Antigravity, and local open-weight models. When local engines are enabled, they go first.
+- **Local first, paid by choice.** The sovereign default engine runs GPT-OSS 20B on your own machine through Ollama, and a paid engine (Claude Code or OpenAI Codex) runs only when no local one can. One contract covers all of them, so a handoff between vendors loses no open question.
+- **Held to gates it can't talk its way past.** Each code layer needs 100% branch coverage to merge, every hard call is argued in an architecture decision record, and releases publish to PyPI through trusted publishing with no stored token.
 
 **Read the design before the code:** [research paper](https://the-vibey-project.github.io/vibey/main/paper/) ([PDF](https://the-vibey-project.github.io/vibey/main/paper.pdf)) · [documentation book](https://the-vibey-project.github.io/vibey/main/) ([PDF](https://the-vibey-project.github.io/vibey/main/book.pdf)) · [architecture decisions](https://github.com/the-vibey-project/vibey/tree/develop/docs/architecture/decisions)
 
-| One install, five components | What it does |
+| One install, the whole family | What it does |
 |---|---|
 | [Conductor](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey) | The six-phase delivery machine: design, build, review, and opt-in deployment. CLI and TUI. |
-| [Engine runners](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_runners) | `claudeloop`, `codexloop`, `cursorloop`, `agyloop`, and the local runner. Each one tells an exhausted rate-limit window apart from exhausted credits and resumes across usage windows. |
-| [`vibey-gh`](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/gh) | Release automation for any GitHub repository: provenance, exact-head AI review, a merge train, and branch promotion. This profile repo runs it. |
+| [Engine runners](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_runners) | `claudeloop` and `codexloop` for the paid agents, `gptossloop` (the sovereign default) and `qwenloop` for local open-weight models. Each one tells an exhausted rate-limit window apart from exhausted credits and resumes across usage windows. |
+| [`vibey-gh`](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/gh) | Release automation for any GitHub repository: provenance, exact-head AI review, a merge train, and branch promotion. This profile repo runs it, pinned to the current `vibey-engine` release. |
 | [`vibey-skills`](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/skills) | A Claude Code plugin marketplace of Agent Skills in which every claim cites its source. |
 | [`vibey-bootstrap`](https://github.com/the-vibey-project/vibey/tree/develop/src/vibey_tools/bootstrap) | Azure, telemetry, configuration and Service Bus foundations, solved once. |
+
+You don't have to live in the terminal. The **krypton** apps are the interface for everyone who isn't: [desktop builds](https://github.com/the-vibey-project/vibey/blob/develop/docs/guides/downloads.md) for Linux and Apple-silicon macOS, Android, iOS, the web, and a VS Code extension. Add them with `pip install krypton-app`, or take a ready-built file from the [downloads page](https://github.com/the-vibey-project/vibey/blob/develop/docs/guides/downloads.md).
 
 ### Contribute
 
@@ -41,7 +48,7 @@ The project is small enough that one good pull request gets noticed. The CI gate
 
 1. **Say hello or ask anything** in [Discussions](https://github.com/the-vibey-project/vibey/discussions). No question is too basic.
 2. **Pick something from the [open issues](https://github.com/the-vibey-project/vibey/issues).** Two good places to start: [Fedora support](https://github.com/the-vibey-project/vibey/issues/1188) and [new skills for vibey-skills](https://github.com/the-vibey-project/vibey/issues/1218). Comment before you start anything large, so we can agree on the shape first.
-3. **Set up with the [contributing guide](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md):** `uv sync`, two hook installs, and a local PostgreSQL. CI runs the same gates you run locally.
+3. **Set up with the [contributing guide](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md):** `uv sync`, two hook installs, and a local PostgreSQL. The [first-hour walkthrough](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md#your-first-hour) goes command by command, from clone to pull request. CI runs the same gates you run locally.
 4. **Open a pull request against `develop`.** Use Conventional Commits; the provenance hook adds the trailer for you.
 
 Rather talk first? Email me or start at **[/join-me](https://vibewithadam.matthewsteinberger.com/join-me)**. Contributors in Greenville and anywhere in the US are welcome, and I'm glad to pair on a first change.
