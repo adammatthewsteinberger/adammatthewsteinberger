@@ -8,7 +8,7 @@
 
 Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
 
-**Find your way in:** [help build vibey](#contribute) · [bring a fixed-scope project](#fixed-scope-projects-built-from-work-already-delivered) · [hire me for a Staff+ role](#open-to-staff-roles)
+**Find your way in:** [open-source developers](#contribute) · [nonprofits](#who-this-is-for) · [universities](#who-this-is-for) · [governments and military](#who-this-is-for) · [freelance projects](#fixed-scope-projects-built-from-work-already-delivered) · [industry and hiring](#open-to-staff-roles)
 
 ## vibey: delivery that survives the agent
 
@@ -54,6 +54,19 @@ The project is small enough that one good pull request gets noticed. The CI gate
 Rather talk first? Email me or start at **[/join-me](https://vibewithadam.matthewsteinberger.com/join-me)**. Contributors in Greenville and anywhere in the US are welcome, and I'm glad to pair on a first change.
 
 Also mine, and deliberately not serious: **[clippy-pet](https://github.com/adammatthewsteinberger/clippy-pet)**, an animated paperclip for the ChatGPT desktop app and Codex CLI.
+
+## Who this is for
+
+Six tracks, in the order I give them my time. The first four are audiences for vibey; the last two have their own sections below.
+
+1. **Open-source developers.** Help build vibey: clone it, run the gates, pick an issue, and open a pull request against `develop`. **[Start with Contribute →](#contribute)**
+2. **Nonprofits.** MIT licensed with nothing to subscribe to, local models by preference so the bill does not hinge on one vendor, your own hardware, and an append-only ledger that can answer to a board or a funder. **[What vibey offers nonprofits →](https://vibewithadam.matthewsteinberger.com/join-me#nonprofits)**
+3. **Universities and academia.** A research paper that states the model formally, the whole documentation as a book, a citation file, and open-licensed code to reproduce, teach with, and extend. **[The paper and the book →](https://vibewithadam.matthewsteinberger.com/join-me#academia)**
+4. **Governments and military.** Local models by preference, an append-only ledger you can audit, provenance on every commit, and review bound to the exact code it examined. **[What vibey offers →](https://vibewithadam.matthewsteinberger.com/join-me#governments)**
+5. **Freelance projects.** Fixed-scope packages built from work already delivered. **[See the packages →](#fixed-scope-projects-built-from-work-already-delivered)**
+6. **Industry and hiring teams.** Staff+ roles in AI platform, identity, and forward-deployed engineering, including regulated and public-sector work. **[Open to Staff+ roles →](#open-to-staff-roles)**
+
+Tracks 2 to 4 describe what vibey offers, and each claim on those pages links to its source in the repository. I claim no nonprofit, university, government or military customer, partnership, grant, contract, clearance, accreditation, or endorsement for vibey.
 
 ## Fixed-scope projects, built from work already delivered
 
@@ -132,6 +145,7 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 ## Contact
 
 - **Want to contribute?** Start a thread in [vibey's Discussions](https://github.com/the-vibey-project/vibey/discussions).
+- **A nonprofit, university, or public-sector team?** Email me, or start at [/join-me](https://vibewithadam.matthewsteinberger.com/join-me).
 - **Have a project?** Send the [written brief](https://vibewithadam.matthewsteinberger.com/freelance#brief).
 - **Hiring?** Everything is on [/hire-me](https://vibewithadam.matthewsteinberger.com/hire-me).
 
