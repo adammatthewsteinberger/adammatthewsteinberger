@@ -8,7 +8,7 @@
 
 Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
 
-**Find your way in:** [open-source developers](#contribute) · [nonprofits](#who-this-is-for) · [universities](#who-this-is-for) · [governments and military](#who-this-is-for) · [freelance projects](#fixed-scope-projects-built-from-work-already-delivered) · [industry and hiring](#open-to-staff-roles)
+**Find your way in:** [FOSS developers](#contribute) · [freelancers](#fixed-scope-projects-built-from-work-already-delivered) · [universities and academia](#who-this-is-for) · [governments and militaries](#who-this-is-for) · [non-profit orgs](#who-this-is-for) · [industry teams](#open-to-staff-roles)
 
 ## vibey: delivery that survives the agent
 
@@ -57,16 +57,16 @@ Also mine, and deliberately not serious: **[clippy-pet](https://github.com/adamm
 
 ## Who this is for
 
-Six tracks, in the order I give them my time. The first four are audiences for vibey; the last two have their own sections below.
+Six tracks, in the order I give them my time:
 
-1. **Open-source developers.** Help build vibey: clone it, run the gates, pick an issue, and open a pull request against `develop`. **[Start with Contribute →](#contribute)**
-2. **Nonprofits.** MIT licensed with nothing to subscribe to, local models by preference so the bill does not hinge on one vendor, your own hardware, and an append-only ledger that can answer to a board or a funder. **[What vibey offers nonprofits →](https://vibewithadam.matthewsteinberger.com/join-me#nonprofits)**
+1. **FOSS developers.** Help build vibey: clone it, run the gates, pick an issue, and open a pull request against `develop`. **[Start with Contribute →](#contribute)**
+2. **Freelancers.** Fixed-scope packages built from work already delivered, and tooling to deliver for your own clients. **[See the packages →](#fixed-scope-projects-built-from-work-already-delivered)**
 3. **Universities and academia.** A research paper that states the model formally, the whole documentation as a book, a citation file, and open-licensed code to reproduce, teach with, and extend. **[The paper and the book →](https://vibewithadam.matthewsteinberger.com/join-me#academia)**
-4. **Governments and military.** Local models by preference, an append-only ledger you can audit, provenance on every commit, and review bound to the exact code it examined. **[What vibey offers →](https://vibewithadam.matthewsteinberger.com/join-me#governments)**
-5. **Freelance projects.** Fixed-scope packages built from work already delivered. **[See the packages →](#fixed-scope-projects-built-from-work-already-delivered)**
-6. **Industry and hiring teams.** Staff+ roles in AI platform, identity, and forward-deployed engineering, including regulated and public-sector work. **[Open to Staff+ roles →](#open-to-staff-roles)**
+4. **Governments and militaries.** Local models by preference, an append-only ledger you can audit, provenance on every commit, and review bound to the exact code it examined. **[What vibey offers →](https://vibewithadam.matthewsteinberger.com/join-me#governments)**
+5. **Non-profit orgs.** MIT licensed with nothing to subscribe to, local models by preference so the bill does not hinge on one vendor, your own hardware, and an append-only ledger that can answer to a board or a funder. **[What vibey offers nonprofits →](https://vibewithadam.matthewsteinberger.com/join-me#nonprofits)**
+6. **Industry teams.** Staff+ roles in AI platform, identity, and forward-deployed engineering, including regulated and public-sector work. **[Open to Staff+ roles →](#open-to-staff-roles)**
 
-Tracks 2 to 4 describe what vibey offers, and each claim on those pages links to its source in the repository. I claim no nonprofit, university, government or military customer, partnership, grant, contract, clearance, accreditation, or endorsement for vibey.
+Tracks 3 to 5 describe what vibey offers, and each claim on those pages links to its source in the repository. I claim no university, government, military, or non-profit customer, partnership, grant, contract, clearance, accreditation, or endorsement for vibey.
 
 ## Fixed-scope projects, built from work already delivered
 
