@@ -10,11 +10,11 @@ Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:
 
 **Find your way in:** [FOSS developers](#contribute) · [freelancers](#fixed-scope-projects-built-from-work-already-delivered) · [universities and academia](#who-this-is-for) · [governments and militaries](#who-this-is-for) · [non-profit orgs](#who-this-is-for) · [industry teams](#open-to-staff-roles)
 
-## vibey: delivery that survives the agent
+## vibey & krypton: the free, sovereign alternative to Claude Code and Codex
 
-You have probably used an AI coding agent and then babysat it: re-prompting when it lost the thread, re-explaining everything after a crash, watching a run die at 2 a.m. because one vendor's credits ran out. The agent was autonomous. The delivery was you.
+Paid coding assistants leave you trapped behind recurring subscriptions, opaque cloud telemetry, and vendor guardrails—while still producing fragile code that requires constant babysitting. vibey and its **krypton** interfaces are built to supersede closed tools like Claude Code and OpenAI Codex with a completely free, open-source, and sovereign environment for everyone.
 
-vibey is the layer that does the babysitting. It interviews you until the spec is sharp, builds unattended across several engines, brings you back only for the decisions that are yours, and survives crashes and credit exhaustion without dropping an open question.
+Driven by local open-weight models (with the sovereign default `gpt-oss-20b-heretic-v2` via Ollama) and governed by an append-only ledger, vibey enforces the discipline of a principal software engineer: sharp spec-first decomposition, 100% branch-coverage merge gates, and provable verification rather than disposable, unverified boilerplate.
 
 ```bash
 uv tool install vibey-engine   # or: pipx install vibey-engine / pip install vibey-engine
@@ -23,11 +23,12 @@ vibey doctor                   # checks your engines, local PostgreSQL, and the 
 
 Python 3.12+ and PostgreSQL 14+ on macOS or Linux. `vibey install --postgres` sets up a local database if you don't have one, and each engine still needs its own vendor CLI and credentials, which `vibey doctor` checks.
 
+- **Zero subscription cost, zero gatekeeping.** Run completely local, free, and unrestricted on your own silicon—no vendor credits or tokens required. Paid engines (Claude Code, OpenAI Codex) remain supported as opt-in runners when you want them.
+- **Principal-grade delivery over fragile code.** Automated test suites, strict layer boundaries, and deterministic verification ensure you receive production-grade architecture, not ungrounded code snippets.
 - **Nothing is lost when an agent dies.** Every decision, finding and handoff is a row in an append-only PostgreSQL ledger, and workers claim jobs under `FOR UPDATE SKIP LOCKED` leases. In the chaos test, 8 workers ran 500 jobs with 20% killed mid-job. None were lost and none ran twice.
 - **The record can't be quietly rewritten.** The database itself refuses every update and delete on the ledger, and a SHA-256 hash chain over its events makes any edit visible.
 - **Handoffs are checked, not trusted.** Work moving from one engine to another must pass a model-free no-loss check, or it retries, escalates, or parks for a person.
 - **A human decision is a record, not a blocked terminal.** Approval gates are rows in the ledger and parked jobs, so nothing sits waiting on stdin.
-- **Local first, paid by choice.** The sovereign default engine runs GPT-OSS 20B on your own machine through Ollama, and a paid engine (Claude Code or OpenAI Codex) runs only when no local one can. One contract covers all of them, so a handoff between vendors loses no open question.
 - **Held to gates it can't talk its way past.** Each code layer needs 100% branch coverage to merge, every hard call is argued in an architecture decision record, and releases publish to PyPI through trusted publishing with no stored token.
 
 **Read the design before the code:** [research paper](https://the-vibey-project.github.io/vibey/main/paper/) ([PDF](https://the-vibey-project.github.io/vibey/main/paper.pdf)) · [documentation book](https://the-vibey-project.github.io/vibey/main/) ([PDF](https://the-vibey-project.github.io/vibey/main/book.pdf)) · [architecture decisions](https://github.com/the-vibey-project/vibey/tree/develop/docs/architecture/decisions)
