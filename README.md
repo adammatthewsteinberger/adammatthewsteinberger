@@ -128,7 +128,7 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 
 - **Available now for Staff+ software engineering roles** in AI platform, identity and access, agent infrastructure, and forward-deployed engineering, including regulated and public-sector work. US remote or Greenville, SC. **[Everything a hiring manager needs →](https://vibewithadam.matthewsteinberger.com/hire-me)**
 - Maintaining **[The Vibey Project](https://github.com/the-vibey-project)** and taking a small number of [fixed-scope projects](#fixed-scope-projects-built-from-work-already-delivered) alongside it.
-- Volunteer software architect for a nonprofit AI chat platform. The AI-to-human live-chat relay is written up at [/work/project-excite-relay](https://vibewithadam.matthewsteinberger.com/work/project-excite-relay).
+- Volunteer software architect for a nonprofit AI chat platform. Two pieces are written up: the AI-to-human live-chat relay at [/work/project-excite-relay](https://vibewithadam.matthewsteinberger.com/work/project-excite-relay), and a monthly data pipeline that finds what a month of messages was about and publishes only counts that ten different people stand behind, at [/work/apg-insight-monthly-elt](https://vibewithadam.matthewsteinberger.com/work/apg-insight-monthly-elt). The source repository is private.
 - Previously Senior Azure and AI Development Engineer at The Vizius Group (Sep 2025 to Aug 2026). Over 13 years in production systems across insurance, fintech, healthcare and industrial testing.
 - B.A. Computer Science, Skidmore College · Certified ScrumMaster
 
@@ -139,6 +139,7 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 - **Security and compliance:** secretless delivery · Semgrep · CodeQL · Trivy · Checkov · SBOM (Syft/CycloneDX) · Cosign keyless signing · Kyverno/OPA · STRIDE · SOC 2 readiness · OWASP LLM Top 10 · NIST AI RMF
 - **AI and LLM systems:** multi-vendor gateways · agent sandboxing and egress policy · multi-agent orchestration · MCP servers · RAG (pgvector, FAISS, Azure AI Search) · Claude · Azure OpenAI/Foundry · GPT · Gemini · vLLM · Ollama
 - **Platform:** Kubernetes (AKS, KEDA) · Terraform · Bicep · Helm · Flux/Argo CD · GitHub Actions · Service Bus · OpenTelemetry · PostgreSQL · Redis · AWS
+- **Data:** dbt · ELT pipelines · PostgreSQL · DuckDB · Snowflake · embeddings and clustering · privacy thresholds on published counts
 - **Languages:** Python (FastAPI, SQLAlchemy 2, Pydantic, kopf) · TypeScript/NestJS · Next.js/React · C#/.NET · Java Spring Boot · SQL · KQL · Bash
 
 </details>
