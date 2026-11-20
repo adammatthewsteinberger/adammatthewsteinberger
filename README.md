@@ -6,7 +6,7 @@
 
 [![pip install vibey-engine](https://img.shields.io/pypi/v/vibey-engine?style=flat-square&label=pip%20install%20vibey-engine&color=6f42c1)](https://pypi.org/project/vibey-engine/) [![Research paper](https://img.shields.io/badge/paper-HTML%20%C2%B7%20PDF-0a7ea4?style=flat-square)](https://the-vibey-project.github.io/vibey/main/paper/) [![Fixed-scope projects](https://img.shields.io/badge/freelance-fixed--scope%20projects-9a6700?style=flat-square)](https://vibewithadam.matthewsteinberger.com/freelance) [![Open to Staff+ roles](https://img.shields.io/badge/open%20to-Staff%2B%20roles-1a7f37?style=flat-square)](https://vibewithadam.matthewsteinberger.com/hire-me) [![Résumé (PDF)](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-0969da?style=flat-square)](https://github.com/adammatthewsteinberger/resume/raw/main/adam-steinberger-resume.pdf) [![LinkedIn](https://img.shields.io/badge/LinkedIn-adammatthewsteinberger-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adammatthewsteinberger/)
 
-Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
+Albany, New York · Greenville, South Carolina · US remote · [adam@matthewsteinberger.com](mailto:adam@matthewsteinberger.com)
 
 **Find your way in:** [FOSS developers](#contribute) · [freelancers](#fixed-scope-projects-built-from-work-already-delivered) · [universities and academia](#who-this-is-for) · [governments and militaries](#who-this-is-for) · [non-profit orgs](#who-this-is-for) · [industry teams](#open-to-staff-roles)
 
@@ -52,7 +52,7 @@ The project is small enough that one good pull request gets noticed. The CI gate
 3. **Set up with the [contributing guide](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md):** `uv sync`, two hook installs, and a local PostgreSQL. The [first-hour walkthrough](https://github.com/the-vibey-project/vibey/blob/develop/CONTRIBUTING.md#your-first-hour) goes command by command, from clone to pull request. CI runs the same gates you run locally.
 4. **Open a pull request against `develop`.** Use Conventional Commits; the provenance hook adds the trailer for you.
 
-Rather talk first? Email me or start at **[/join-me](https://vibewithadam.matthewsteinberger.com/join-me)**. Contributors in Greenville and anywhere in the US are welcome, and I'm glad to pair on a first change.
+Rather talk first? Email me or start at **[/join-me](https://vibewithadam.matthewsteinberger.com/join-me)**. Contributors in Albany, in Greenville, and anywhere in the US are welcome, and I'm glad to pair on a first change.
 
 Also mine, and deliberately not serious: **[clippy-pet](https://github.com/adammatthewsteinberger/clippy-pet)**, an animated paperclip for the ChatGPT desktop app and Codex CLI.
 
@@ -126,7 +126,7 @@ Underneath all of it: OIDC workload identity across 20 CI workflows in 9 reposit
 
 ## Open to Staff+ roles
 
-- **Available now for Staff+ software engineering roles** in AI platform, identity and access, agent infrastructure, and forward-deployed engineering, including regulated and public-sector work. US remote or Greenville, SC. **[Everything a hiring manager needs →](https://vibewithadam.matthewsteinberger.com/hire-me)**
+- **Available now for Staff+ software engineering roles** in AI platform, identity and access, agent infrastructure, and forward-deployed engineering, including regulated and public-sector work. Albany, NY, Greenville, SC, or US remote. **[Everything a hiring manager needs →](https://vibewithadam.matthewsteinberger.com/hire-me)**
 - Maintaining **[The Vibey Project](https://github.com/the-vibey-project)** and taking a small number of [fixed-scope projects](#fixed-scope-projects-built-from-work-already-delivered) alongside it.
 - Volunteer software architect for a nonprofit AI chat platform. Two pieces are written up: the AI-to-human live-chat relay at [/work/project-excite-relay](https://vibewithadam.matthewsteinberger.com/work/project-excite-relay), and [APG Insight](https://vibewithadam.matthewsteinberger.com/work/apg-insight-monthly-elt), a monthly pipeline that finds what people talk about in the chat with no list of subjects written in advance. Multilingual embeddings are clustered into 40 micro-topics and merged into 12 categories, a local open-weight model judges and names each, and a public portal answers a visitor's question from the data, publishing only what ten different people stand behind. Discovery and assignment for 120,901 messages take about two minutes on a laptop. The source repository is private and the portal is built and tested but not deployed.
 - Previously Senior Azure and AI Development Engineer at The Vizius Group (Sep 2025 to Aug 2026). Over 13 years in production systems across insurance, fintech, healthcare and industrial testing.
